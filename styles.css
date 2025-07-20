@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  max-width: 19%;
+}
+.logo span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 7px;
+  padding-left: 8px;
+}
+.nav {
+  display: flex;
+}
+.nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+/* Hamburger menu toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ===== Menue ===== */
+.menue {
+  background: url(images/BG.png) center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 16rem 2rem;
+}
+.menue-content h1 {
+  font-size: 5rem;
+}
+.menue-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  background-color: #e67e22;
+  color: #fff;
+  padding: 1.2rem 2.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ===== Features ===== */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.feature {
+  max-width: 250px;
+  margin-bottom: 1.5rem;
+}
+.feature h3 {
+  margin-bottom: 0.4rem;
+  color: #000;
+  font-size: 17px;
+}
+.features-icons {
+  max-width: 15%;
+}
+
+/* ===== Menu Preview ===== */
+.menu-preview {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.menu-preview h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.menu-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.menu-item {
+  max-width: 300px;
+}
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+.menu-item p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  color: #000;
+  margin-top: 2rem;
+}
+.last1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.copy-right {
+  margin-top: 20px;
+  background-color: #333;
+  color: #eee;
+}
+.p1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ===== Responsive Media Queries ===== */
+
+/* Large desktops */
+@media (max-width: 1400px) {
+  .logo span {
+    font-size: 1.4rem;
+  }
+  .menue-content h1 {
+    font-size: 4.5rem;
+  }
+  .features-icons {
+    max-width: 18%;
+  }
+}
+
+/* Smaller desktops/tablets */
+@media (max-width: 1200px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+  .menue-content h1 {
+    font-size: 4rem;
+  }
+  .menue {
+    padding: 14rem 1.5rem;
+  }
+  .features {
+    padding: 2.5rem 1.5rem;
+  }
+  .features-icons {
+    max-width: 20%;
+  }
+}
+
+/* Tablets / large phones */
+@media (max-width: 768px) {
+  /* Header becomes column */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    display: none; /* hide desktop nav */
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menue */
+  .menue {
+    padding: 12rem 1.5rem;
+  }
+  .menue-content h1 {
+    font-size: 3.2rem;
+  }
+  .menue-content p {
+    font-size: 1.3rem;
+  }
+
+  /* Features stack vertically */
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature {
+    max-width: 80%;
+  }
+  .features-icons {
+    max-width: 30%;
+    margin-bottom: 1rem;
+  }
+
+  /* Menu preview */
+  .menu-items {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Footer */
+  .last1 {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 640px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  /* Header padding and logo */
+  .header {
+    padding: 0.8rem 1rem;
+  }
+  .logo span {
+    font-size: 1.2rem;
+  }
+
+  /* Menue */
+  .menue {
+    padding: 10rem 1rem;
+  }
+  .menue-content h1 {
+    font-size: 2.8rem;
+  }
+  .menue-content p {
+    font-size: 1.1rem;
+  }
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Features */
+  .feature {
+    max-width: 90%;
+  }
+  .feature h3 {
+    font-size: 16px;
+  }
+
+  /* Menu preview */
+  .menu-item {
+    max-width: 100%;
+  }
+
+  /* Footer text */
+  .p1 {
+    font-size: 14px;
+  }
+}
